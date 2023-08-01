@@ -32,3 +32,4 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 # enable NetworkManager systemd service
 systemctl enable NetworkManager
+systemctl enable iwd
