@@ -16,6 +16,8 @@ Where [Latest_Release] is the version number of the latest release etc v1.0.2. T
 
 `cd archInstaller`
 
+`chmod +x ./archInstaller.sh`
+
 `./archInstaller.sh`
 
 To Do: 
