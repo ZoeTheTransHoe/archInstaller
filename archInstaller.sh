@@ -4,7 +4,6 @@ fdisk -l
 echo -N "Which Drive Do You Want To Install Arch Linux Onto?"
 read -r TARGET_DISK
 
-echo "Go Make A Coupa Now..."
 loadkeys /usr/share/kbd/keymaps/i386/qwerty/uk.map.gz
 timedatectl set-ntp true
 
@@ -35,6 +34,8 @@ n
 w
 EOF
 
+echo "Go Make A Coupa Now And Wait For The Script To Be Done And Reboot The PC..."
+
 mkfs.fat -F32 "${TARGET_DISK}1"
 mkswap "${TARGET_DISK}2"
 mkfs.ext4 -m 1 "${TARGET_DISK}3"
@@ -47,6 +48,6 @@ pacstrap -K /mnt base base-devel linux linux-headers linux-lts linux-lts-headers
 genfstab -U /mnt >>/mnt/etc/fstab
 
 cp userSetup.sh /mnt
-arch-chroot /mnt ./userSetup.sh
+arch-chroot /mnt ./userSetup.sh $1
 exit
 reboot

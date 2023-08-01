@@ -23,3 +23,26 @@ systemctl enable NetworkManager
 systemctl enable iwd
 
 pacman -S flatpak hyfetch --noconfirm 
+
+#!/bin/bash
+
+if [[ "$1" == GNOME ]];
+then
+echo "Installing GNOME"
+
+elif [[ "$1" == KDE ]];
+then
+echo "Installing KDE"
+
+elif [[ "$1" == XFCE ]];
+then
+echo "Installing XFCE"
+
+elif [ -z "$1" ];
+then
+echo "Nothing Selected - Installing GNOME"
+
+else
+echo "That Is Not A Valid DE"
+fi
+
