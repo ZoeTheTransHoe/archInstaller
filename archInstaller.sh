@@ -42,6 +42,9 @@ mount "${TARGET_DISK}3" /mnt
 mkdir -p /mnt/boot
 mount "${TARGET_DISK}1" /mnt/boot
 
-pacstrap -K /mnt base base-devel linux linux-headers linux-lts linux-lts-headers linux-firmware vim git networkmanager grub os-prober efibootmgr
+pacstrap -K /mnt base base-devel linux linux-headers linux-lts linux-lts-headers linux-firmware vim git iwd networkmanager grub os-prober efibootmgr
 genfstab -U /mnt >>/mnt/etc/fstab
 
+cp userSetup.sh /mnt
+arch-chroot /mnt ./userSetup.sh
+umount /mnt/boot /mnt
