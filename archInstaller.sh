@@ -25,7 +25,7 @@ n
 +8G
 t
 2
-19
+19 
 
 
 n
@@ -50,4 +50,4 @@ cp userSetup.sh /mnt
 arch-chroot /mnt
 chmod +x ./userSetup.sh
 ./userSetup.sh
-umount /mnt/boot /mnt
+reboot
