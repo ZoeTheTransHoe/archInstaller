@@ -10,13 +10,13 @@ Run
 
 `curl -LJO https://github.com/ZoeTheTransHoe/archInstaller/releases/download/[Latest_Release]/archInstaller.tar.xz`
 
-Where [Latest_Release] is the version number of the latest release etc v1.0.2. Then:
+Where [Latest_Release] is the version number of the latest release etc v1.0.5. Then:
 
 `tar -xf archInstaller.tar.xz`
 
 `cd archInstaller`
 
-`chmod +x ./archInstaller.sh`
+`chmod +x ./archInstaller.sh ./userSetup.sh`
 
 `./archInstaller.sh`
 
