@@ -27,13 +27,13 @@ pacman -S flatpak hyfetch --noconfirm
 if [[ "$1" == GNOME ]];
 then
 echo "Installing GNOME"
-pacman -S gnome
+pacman -S gnome --noconfirm 
 systemctl enable gdm
 
 elif [[ "$1" == KDE ]];
 then
 echo "Installing KDE"
-pacman -S plasma plasma-wayland-session
+pacman -S plasma plasma-wayland-session --noconfirm 
 systemctl enable sddm
 
 elif [[ "$1" == XFCE ]];

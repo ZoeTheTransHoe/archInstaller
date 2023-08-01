@@ -18,11 +18,18 @@ Where [Latest_Release] is the version number of the latest release etc v1.0.5. T
 
 `chmod +x ./archInstaller.sh ./userSetup.sh`
 
-`./archInstaller.sh`
+`./archInstaller.sh [Option Of DE]`
+
+The Options For DE Are
+- GNOME
+- KDE
+- XFCE
+They must be in all caps. The Default Is GNOME.
 
 To Do: 
 - Make A Normal User 
-- Add Sudo Flatpak + Nano As Packages Installed 
+- Add Sudo As Packages Installed 
 - Setup Sudo For User
-- Remove The Hostname + Localisation Prompts. 
+- Let XFCE Also Be Downloaded
+- Detect Windows Partition + Act Accordingly
 
