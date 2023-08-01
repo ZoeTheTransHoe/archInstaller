@@ -8,7 +8,7 @@ To Install :
 Boot Into Arch ISO, Connect To Wifi/Ethernet/Cellular. 
 Run 
 
-`curl -LJO https://github.com/ZoeTheTransHoe/archInstaller/releases/download/[Latest_Release]/archInstaller.zip`
+`curl -LJO https://github.com/ZoeTheTransHoe/archInstaller/releases/download/[Latest_Release]/archInstaller.tar.xz`
 
 Where [Latest_Release] is the version number of the latest release etc v1.0.2. Then:
 
