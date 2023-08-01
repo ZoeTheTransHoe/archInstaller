@@ -41,3 +41,7 @@ mkfs.ext4 -m 1 "${TARGET_DISK}3"
 mount "${TARGET_DISK}3" /mnt
 mkdir -p /mnt/boot
 mount "${TARGET_DISK}1" /mnt/boot
+
+pacstrap -K /mnt base base-devel linux linux-headers linux-lts linux-lts-headers linux-firmware vim git networkmanager grub os-prober efibootmgr
+genfstab -U /mnt >>/mnt/etc/fstab
+
