@@ -12,9 +12,11 @@ Run
 
 Where [Latest_Release] is the version number of the latest release etc v1.0.2. Then:
 
-`tar -xf archInstaller.zip`
+`tar -xf archInstaller.tar.xz`
 
 `cd archInstaller`
+
+`chmod +x ./archInstaller.sh`
 
 `./archInstaller.sh`
 
