@@ -24,15 +24,17 @@ systemctl enable iwd
 
 pacman -S flatpak hyfetch --noconfirm 
 
-#!/bin/bash
-
 if [[ "$1" == GNOME ]];
 then
 echo "Installing GNOME"
+pacman -S gnome
+systemctl enable gdm
 
 elif [[ "$1" == KDE ]];
 then
 echo "Installing KDE"
+pacman -S plasma plasma-wayland-session
+systemctl enable sddm
 
 elif [[ "$1" == XFCE ]];
 then
