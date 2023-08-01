@@ -12,5 +12,10 @@ Where [Latest_Release] is the version number of the latest release etc v1.0.2.
 tar -xf archInstaller.zip
 cd archInstaller
 ./archInstaller.sh
+
 To Do: 
+Make A Normal User 
+Add Sudo Flatpak + Nano As Packages Installed 
+Setup Sudo For User
+Remove The Hostname + Localisation Prompts. 
 
