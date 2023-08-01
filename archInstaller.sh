@@ -6,7 +6,6 @@ read -r TARGET_DISK
 
 echo "Go Make A Coupa Now..."
 loadkeys /usr/share/kbd/keymaps/i386/qwerty/uk.map.gz
-iwctl station wlan0 connect vodafone090A70 Fm7s3fkGaeZXm63X
 timedatectl set-ntp true
 
 ls /sys/firmware/efi/efivars || { echo "Boot Type Is Not UEFI!; "exit 1; }
