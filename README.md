@@ -4,3 +4,13 @@ Arch Install Script
 - Choice Of GNOME/KDE/XFCE, with GNOME Being Default
 - Detects If Windows Is Installed + Dual Boots Accordingly If So/Overwrites Windows If User 	Requests It. By Default Will Dual Boot With Max Space Given To Arch 
 
+To Install : 
+Boot Into Arch ISO, Connect To Wifi/Ethernet/Cellular. 
+Run 
+curl -LJO https://github.com/ZoeTheTransHoe/archInstaller/releases/download/[Latest_Release]/archInstaller.zip
+Where [Latest_Release] is the version number of the latest release etc v1.0.2.
+tar -xf archInstaller.zip
+cd archInstaller
+./archInstaller.sh
+To Do: 
+
