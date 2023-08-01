@@ -7,15 +7,20 @@ Arch Install Script
 To Install : 
 Boot Into Arch ISO, Connect To Wifi/Ethernet/Cellular. 
 Run 
-curl -LJO https://github.com/ZoeTheTransHoe/archInstaller/releases/download/[Latest_Release]/archInstaller.zip
-Where [Latest_Release] is the version number of the latest release etc v1.0.2.
-tar -xf archInstaller.zip
-cd archInstaller
-./archInstaller.sh
+
+`curl -LJO https://github.com/ZoeTheTransHoe/archInstaller/releases/download/[Latest_Release]/archInstaller.zip`
+
+Where [Latest_Release] is the version number of the latest release etc v1.0.2. Then:
+
+`tar -xf archInstaller.zip`
+
+`cd archInstaller`
+
+`./archInstaller.sh`
 
 To Do: 
-Make A Normal User 
-Add Sudo Flatpak + Nano As Packages Installed 
-Setup Sudo For User
-Remove The Hostname + Localisation Prompts. 
+- Make A Normal User 
+- Add Sudo Flatpak + Nano As Packages Installed 
+- Setup Sudo For User
+- Remove The Hostname + Localisation Prompts. 
 
