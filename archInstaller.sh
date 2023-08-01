@@ -47,5 +47,7 @@ pacstrap -K /mnt base base-devel linux linux-headers linux-lts linux-lts-headers
 genfstab -U /mnt >>/mnt/etc/fstab
 
 cp userSetup.sh /mnt
-arch-chroot /mnt ./userSetup.sh
+arch-chroot /mnt
+chmod +x ./userSetup.sh
+./userSetup.sh
 umount /mnt/boot /mnt
