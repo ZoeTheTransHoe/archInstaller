@@ -9,7 +9,7 @@ loadkeys /usr/share/kbd/keymaps/i386/qwerty/uk.map.gz
 timedatectl set-ntp true
 
 ls /sys/firmware/efi/efivars || { echo "Boot Type Is Not UEFI!; "exit 1; }
-sfdisk --delete TARGET_DISK
+sfdisk --delete $TARGET_DISK
 
 fdisk "${TARGET_DISK}" <<EOF
 n
