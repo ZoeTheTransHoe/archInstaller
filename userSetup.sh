@@ -6,10 +6,10 @@ locale-gen
 echo "LANG=en_US.UTF-8" >/etc/locale.conf
 
 # set the time zone
-echo -n "Enter Time Zone: " 
-read -r TIME_ZONE 
 ln -sf /usr/share/zoneinfo/UTC /etc/localtime 
 hwclock --systohc
+
+passwd 
 
 sudo useradd -m -G wheel zoey 
 echo 1234 | passwd zoey 
@@ -60,57 +60,49 @@ else
 echo "That Is Not A Valid DE"
 fi
 
-flatpak install app.xemu.xemu \
-com.discordapp.Discord\
-com.github.tchx84.Flatseal\
-com.heroicgameslauncher.hgl\
-com.mojang.Minecraft\
-com.obsproject.Studio\
-com.raggesilver.BlackBox\
-com.slack.Slack\
-com.spotify.Client\
-com.unity.UnityHub\
-com.usebottles.bottles\
-com.valvesoftware.Steam\
-com.visualstudio.code\
-fr.handbrake.ghb\
-hu.kramo.Cartridges\
-io.bassi.Amberol\
-io.github.Figma_Linux.figma_linux\
-io.github.arunsivaramanneo.GPUViewer\
-io.github.shiftey.Desktop\
-io.gitlab.adhami3310.Footage\
-md.obsidian.Obsidian\
-me.kozec.syncthingtk\
-net.davidotek.pupgui2\
-net.lutris.Lutris\
-net.supertuxkart.SuperTuxKart\
-org.DolphinEmu.dolphin-emu\
-org.freedesktop.Sdk.Extension.dotnet6\
-org.freedesktop.Sdk.Extension.dotnet6\
-org.freedesktop.Sdk.Extension.mono5\
-org.freedesktop.Sdk.Extension.mono6\
-org.gimp.GIMP\
-org.gnome.Boxes\
-org.gnome.Boxes.Extension.OsinfoDb\
-org.gnome.Builder\
-org.gnome.Devhelp\
-org.gnome.Epiphany\
-org.gnome.Glade\
-org.gnome.Loupe\
-org.gnome.Loupe.HEIC\
-org.gnome.Mahjongg\
-org.inkscape.Inkscape\
-org.kde.krita\
-org.libreoffice.LibreOffice\
-org.nickvision.tubeconverter\
-org.openttd.OpenTTD\
-org.prismlauncher.PrismLauncher\
-org.videolan.VLC\
-org.winehq.Wine.DLLs.dxvk\
-org.winehq.Wine.gecko\
-org.winehq.Wine.mono\
-org.zdoom.GZDoom\
-xyz.armcord.ArmCord\
--y 
+flatpak install -y app.xemu.xemu \
+	com.discordapp.Discord\
+	com.github.tchx84.Flatseal\
+	com.heroicgameslauncher.hgl\
+	com.mojang.Minecraft\
+	com.obsproject.Studio\
+	com.raggesilver.BlackBox\
+	com.slack.Slack\
+	com.spotify.Client\
+	com.unity.UnityHub\
+	com.usebottles.bottles\
+	com.valvesoftware.Steam\
+	com.visualstudio.code\
+	fr.handbrake.ghb\
+	hu.kramo.Cartridges\
+	io.bassi.Amberol\
+	io.github.Figma_Linux.figma_linux\
+	io.github.arunsivaramanneo.GPUViewer\
+	io.github.shiftey.Desktop\
+	io.gitlab.adhami3310.Footage\
+	md.obsidian.Obsidian\
+	me.kozec.syncthingtk\
+	net.davidotek.pupgui2\
+	net.lutris.Lutris\
+	net.supertuxkart.SuperTuxKart\
+	org.DolphinEmu.dolphin-emu\
+	org.gimp.GIMP\
+	org.gnome.Boxes\
+	org.gnome.Boxes.Extension.OsinfoDb\
+	org.gnome.Builder\
+	org.gnome.Devhelp\
+	org.gnome.Epiphany\
+	org.gnome.Glade\
+	org.gnome.Loupe\
+	org.gnome.Loupe.HEIC\
+	org.gnome.Mahjongg\
+	org.inkscape.Inkscape\
+	org.kde.krita\
+	org.libreoffice.LibreOffice\
+	org.nickvision.tubeconverter\
+	org.openttd.OpenTTD\
+	org.prismlauncher.PrismLauncher\
+	org.videolan.VLC\
+	org.zdoom.GZDoom\
+	xyz.armcord.ArmCord
 exit
