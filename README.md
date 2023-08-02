@@ -25,6 +25,7 @@ The Options For DE Are
 - KDE
 - XFCE
 - LXQT
+- 
 They must be in all caps. The Default Is GNOME.
 
 To Do: 
