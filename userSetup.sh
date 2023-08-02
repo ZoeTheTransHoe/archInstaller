@@ -11,7 +11,7 @@ read -r TIME_ZONE
 ln -sf /usr/share/zoneinfo/UTC /etc/localtime 
 hwclock --systohc
 
-echo "root:1" | chpasswd -R /mnt
+echo "root:1" | chpasswd -R /mnt  -c NONE
 echo "zoey:1" | chpasswd -R /mnt
 echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers
 # install and configure grub
@@ -48,5 +48,4 @@ echo "Nothing Selected - Installing GNOME"
 else
 echo "That Is Not A Valid DE"
 fi
-
-
+exit

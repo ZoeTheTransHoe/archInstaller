@@ -49,5 +49,4 @@ genfstab -U /mnt >>/mnt/etc/fstab
 
 cp userSetup.sh /mnt
 arch-chroot /mnt ./userSetup.sh $1
-exit
 reboot
