@@ -58,11 +58,28 @@ else
 echo "That Is Not A Valid DE"
 fi
 
-flatpak install -y com.heroicgameslauncher.hgl net.supertuxkart.SuperTuxKart com.usebottles.bottles com.valvesoftware.Steam net.lutris.Lutris -y
-flatpak install -y com.unity.UnityHub com.obsproject.Studio
-flatpak install -y com.visualstudio.code io.github.arunsivaramanneo.GPUViewer md.obsidian.Obsidian org.gnome.Boxes org.gnome.Boxes.Extension.OsinfoDb
-flatpak install -y org.DolphinEmu.dolphin-emu org.openttd.OpenTTD app.xemu.xemu org.prismlauncher.PrismLauncher org.zdoom.GZDoom
-flatpak install -y org.inkscape.Inkscape fr.handbrake.ghb org.gimp.GIMP org.kde.krita
-flatpak install -y org.libreoffice.LibreOffice org.mozilla.firefox org.videolan.VLC
-flaptak install -y xyz.armcord.ArmCord com.spotify.Client io.bassi.Amberol
+flatpak install -y com.heroicgameslauncher.hgl 
+flatpak install -y net.supertuxkart.SuperTuxKart 
+flatpak install -y com.usebottles.bottles 
+flatpak install -y com.valvesoftware.Steam 
+flatpak install -y net.lutris.Lutris 
+flatpak install -y com.obsproject.Studio 
+flatpak install -y com.unity.UnityHub 
+flatpak install -y com.visualstudio.code 
+flatpak install -y md.obsidian.Obsidian 
+flatpak install -y org.DolphinEmu.dolphin-emu 
+flatpak install -y org.openttd.OpenTTD 
+flatpak install -y app.xemu.xemu 
+flatpak install -y org.prismlauncher.PrismLauncher 
+flatpak install -y org.zdoom.GZDoom
+flatpak install -y org.inkscape.Inkscape 
+flatpak install -y fr.handbrake.ghb
+flatpak install -y org.gimp.GIMP 
+flatpak install -y org.kde.krita
+flatpak install -y org.libreoffice.LibreOffice 
+flatpak install -y org.mozilla.firefox 
+flatpak install -y org.videolan.VLC
+flaptak install -y xyz.armcord.ArmCord 
+flatpak install -y com.spotify.Client 
+flatpak install -y io.bassi.Amberol
 exit
