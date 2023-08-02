@@ -11,8 +11,9 @@ read -r TIME_ZONE
 ln -sf /usr/share/zoneinfo/UTC /etc/localtime 
 hwclock --systohc
 
-echo "root:1" | chpasswd -R /mnt -c NONE
-echo "zoey:1" | chpasswd -R /mnt
+sudo useradd -m -G wheel zoey 
+echo 1234 | passwd zoey --stdin
+
 echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers
 # install and configure grub
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
