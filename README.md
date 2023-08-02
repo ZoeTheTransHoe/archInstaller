@@ -30,6 +30,5 @@ To Do:
 - Make A Normal User 
 - Add Sudo As Packages Installed 
 - Setup Sudo For User
-- Let XFCE Also Be Downloaded
 - Detect Windows Partition + Act Accordingly
 

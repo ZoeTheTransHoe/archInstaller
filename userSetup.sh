@@ -11,9 +11,9 @@ read -r TIME_ZONE
 ln -sf /usr/share/zoneinfo/UTC /etc/localtime 
 hwclock --systohc
 
-# set root user password
-passwd
-
+echo "root:1" | chpasswd -R /mnt
+echo "zoey:1" | chpasswd -R /mnt
+echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers
 # install and configure grub
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
@@ -22,7 +22,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 systemctl enable NetworkManager
 systemctl enable iwd
 
-pacman -S flatpak hyfetch --noconfirm 
+pacman -S htop flatpak hyfetch bash-completion --noconfirm 
 
 if [[ "$1" == GNOME ]];
 then
@@ -39,6 +39,7 @@ systemctl enable sddm
 elif [[ "$1" == XFCE ]];
 then
 echo "Installing XFCE"
+pacman -S xfce4 xfce4-goodies --noconfirm
 
 elif [ -z "$1" ];
 then
@@ -47,4 +48,5 @@ echo "Nothing Selected - Installing GNOME"
 else
 echo "That Is Not A Valid DE"
 fi
+
 
