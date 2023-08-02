@@ -24,11 +24,11 @@ The Options For DE Are
 - GNOME
 - KDE
 - XFCE
+- LXQT
 They must be in all caps. The Default Is GNOME.
 
 To Do: 
 - Make A Normal User 
-- Add Sudo As Packages Installed 
 - Setup Sudo For User
 - Detect Windows Partition + Act Accordingly
 

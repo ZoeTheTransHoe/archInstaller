@@ -1,5 +1,32 @@
 #!/bin/bash
 
+if [[ "$1" == GNOME ]];
+then
+echo "Installing GNOME"
+
+elif [[ "$1" == KDE ]];
+then
+echo "Installing KDE"
+
+elif [[ "$1" == XFCE ]];
+then
+echo "Installing XFCE"
+
+
+elif [[ "$1" == LXQT ]];
+then
+echo "Installing LXQT"
+
+elif [ -z "$1" ];
+then
+echo "Nothing Selected - Installing GNOME"
+
+else
+echo "That Is Not A Valid DE"
+exit
+fi
+
+
 fdisk -l 
 echo -N "Which Drive Do You Want To Install Arch Linux Onto?"
 read -r TARGET_DISK
@@ -34,11 +61,11 @@ n
 w
 EOF
 
-echo "Go Make A Coupa Now And Wait For The Script To Be Done And Reboot The PC..."
-
 mkfs.fat -F32 "${TARGET_DISK}1"
 mkswap "${TARGET_DISK}2"
 mkfs.ext4 -m 1 "${TARGET_DISK}3"
+
+echo "Go Make A Coupa Now And Wait For The Script To Be Done And Reboot The PC..."
 
 mount "${TARGET_DISK}3" /mnt
 mkdir -p /mnt/boot
