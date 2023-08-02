@@ -21,14 +21,14 @@ grub-mkconfig -o /boot/grub/grub.cfg
 systemctl enable NetworkManager
 systemctl enable iwd
 
-pacman -S yt-dlp htop flatpak hyfetch bash-completion --noconfirm 
+pacman -S firefox yt-dlp htop flatpak hyfetch bash-completion --noconfirm 
 
 if [[ "$1" == GNOME ]];
 then
 echo "Installing GNOME"
 pacman -S gnome --noconfirm 
 systemctl enable gdm
-flatpak install com.mattjakeman.ExtensionManager org.gnome.Builder org.gnome.Epiphany org.gnome.Loupe org.gnome.Loupe.HEIC org.gnome.Mahjongg -y
+flatpak install com.mattjakeman.ExtensionManager org.gnome.Loupe org.gnome.Loupe.HEIC -y
 
 elif [[ "$1" == KDE ]];
 then
@@ -52,7 +52,7 @@ then
 echo "Nothing Selected - Installing GNOME"
 pacman -S gnome --noconfirm 
 systemctl enable gdm
-flatpak install com.mattjakeman.ExtensionManager -y
+flatpak install com.mattjakeman.ExtensionManager org.gnome.Loupe org.gnome.Loupe.HEIC -y
 
 else
 echo "That Is Not A Valid DE"
@@ -64,20 +64,14 @@ flatpak install -y com.usebottles.bottles
 flatpak install -y com.valvesoftware.Steam 
 flatpak install -y net.lutris.Lutris 
 flatpak install -y com.obsproject.Studio 
-flatpak install -y com.unity.UnityHub 
 flatpak install -y com.visualstudio.code 
-flatpak install -y md.obsidian.Obsidian 
 flatpak install -y org.DolphinEmu.dolphin-emu 
 flatpak install -y org.openttd.OpenTTD 
 flatpak install -y app.xemu.xemu 
 flatpak install -y org.prismlauncher.PrismLauncher 
 flatpak install -y org.zdoom.GZDoom
-flatpak install -y org.inkscape.Inkscape 
 flatpak install -y fr.handbrake.ghb
-flatpak install -y org.gimp.GIMP 
 flatpak install -y org.kde.krita
-flatpak install -y org.libreoffice.LibreOffice 
-flatpak install -y org.mozilla.firefox 
 flatpak install -y org.videolan.VLC
 flaptak install -y xyz.armcord.ArmCord 
 flatpak install -y com.spotify.Client 
