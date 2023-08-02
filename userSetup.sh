@@ -30,7 +30,7 @@ then
 echo "Installing GNOME"
 pacman -S gnome --noconfirm 
 systemctl enable gdm
-flatpak install com.mattjakeman.ExtensionManager -y
+flatpak install com.mattjakeman.ExtensionManager org.gnome.Builder org.gnome.Epiphany org.gnome.Loupe org.gnome.Loupe.HEIC org.gnome.Mahjongg -y
 
 elif [[ "$1" == KDE ]];
 then
@@ -46,7 +46,7 @@ pacman -S xfce4 xfce4-goodies --noconfirm
 elif [[ "$1" == LXQT ]];
 then
 echo "Installing LXQT"
-pacman -S lxqt breeze-icons sddm --noconfirm
+pacman -S xorg lxqt xdg-utils ttf-freefont sddm libpulse libstatgrab libsysstat lm_sensors network-manager-applet oxygen-icons pavucontrol-qt --noconfirm
 systemctl enable sddm
 
 elif [ -z "$1" ];
@@ -62,40 +62,23 @@ fi
 
 flatpak install -y app.xemu.xemu \
 	com.discordapp.Discord\
-	com.github.tchx84.Flatseal\
 	com.heroicgameslauncher.hgl\
-	com.mojang.Minecraft\
 	com.obsproject.Studio\
-	com.raggesilver.BlackBox\
-	com.slack.Slack\
 	com.spotify.Client\
 	com.unity.UnityHub\
 	com.usebottles.bottles\
 	com.valvesoftware.Steam\
 	com.visualstudio.code\
 	fr.handbrake.ghb\
-	hu.kramo.Cartridges\
 	io.bassi.Amberol\
-	io.github.Figma_Linux.figma_linux\
 	io.github.arunsivaramanneo.GPUViewer\
-	io.github.shiftey.Desktop\
-	io.gitlab.adhami3310.Footage\
 	md.obsidian.Obsidian\
-	me.kozec.syncthingtk\
-	net.davidotek.pupgui2\
 	net.lutris.Lutris\
 	net.supertuxkart.SuperTuxKart\
 	org.DolphinEmu.dolphin-emu\
 	org.gimp.GIMP\
 	org.gnome.Boxes\
 	org.gnome.Boxes.Extension.OsinfoDb\
-	org.gnome.Builder\
-	org.gnome.Devhelp\
-	org.gnome.Epiphany\
-	org.gnome.Glade\
-	org.gnome.Loupe\
-	org.gnome.Loupe.HEIC\
-	org.gnome.Mahjongg\
 	org.inkscape.Inkscape\
 	org.kde.krita\
 	org.libreoffice.LibreOffice\
