@@ -9,10 +9,8 @@ echo "LANG=en_US.UTF-8" >/etc/locale.conf
 ln -sf /usr/share/zoneinfo/UTC /etc/localtime 
 hwclock --systohc
 
-passwd 
-
 sudo useradd -m -G wheel zoey 
-echo 1234 | passwd zoey 
+passwd zoey 
 
 echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers
 # install and configure grub
@@ -23,7 +21,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 systemctl enable NetworkManager
 systemctl enable iwd
 
-pacman -S htop flatpak hyfetch bash-completion --noconfirm 
+pacman -S yt-dlp htop flatpak hyfetch bash-completion --noconfirm 
 
 if [[ "$1" == GNOME ]];
 then
@@ -46,7 +44,7 @@ pacman -S xfce4 xfce4-goodies --noconfirm
 elif [[ "$1" == LXQT ]];
 then
 echo "Installing LXQT"
-pacman -S xorg lxqt xdg-utils ttf-freefont sddm libpulse libstatgrab libsysstat lm_sensors network-manager-applet oxygen-icons pavucontrol-qt --noconfirm
+pacman -S xorg lxqt xdg-utils ttf-freefont sddm libpulse libstatgrab libsysstat lm_sensors network-manager-applet kwin breeze-icons pavucontrol-qt --noconfirm
 systemctl enable sddm
 
 elif [ -z "$1" ];
@@ -60,32 +58,11 @@ else
 echo "That Is Not A Valid DE"
 fi
 
-flatpak install -y app.xemu.xemu \
-	com.discordapp.Discord\
-	com.heroicgameslauncher.hgl\
-	com.obsproject.Studio\
-	com.spotify.Client\
-	com.unity.UnityHub\
-	com.usebottles.bottles\
-	com.valvesoftware.Steam\
-	com.visualstudio.code\
-	fr.handbrake.ghb\
-	io.bassi.Amberol\
-	io.github.arunsivaramanneo.GPUViewer\
-	md.obsidian.Obsidian\
-	net.lutris.Lutris\
-	net.supertuxkart.SuperTuxKart\
-	org.DolphinEmu.dolphin-emu\
-	org.gimp.GIMP\
-	org.gnome.Boxes\
-	org.gnome.Boxes.Extension.OsinfoDb\
-	org.inkscape.Inkscape\
-	org.kde.krita\
-	org.libreoffice.LibreOffice\
-	org.nickvision.tubeconverter\
-	org.openttd.OpenTTD\
-	org.prismlauncher.PrismLauncher\
-	org.videolan.VLC\
-	org.zdoom.GZDoom\
-	xyz.armcord.ArmCord
+flatpak install -y com.heroicgameslauncher.hgl net.supertuxkart.SuperTuxKart com.usebottles.bottles com.valvesoftware.Steam net.lutris.Lutris -y
+flatpak install -y com.unity.UnityHub com.obsproject.Studio
+flatpak install -y com.visualstudio.code io.github.arunsivaramanneo.GPUViewer md.obsidian.Obsidian org.gnome.Boxes org.gnome.Boxes.Extension.OsinfoDb
+flatpak install -y org.DolphinEmu.dolphin-emu org.openttd.OpenTTD app.xemu.xemu org.prismlauncher.PrismLauncher org.zdoom.GZDoom
+flatpak install -y org.inkscape.Inkscape fr.handbrake.ghb org.gimp.GIMP org.kde.krita
+flatpak install -y org.libreoffice.LibreOffice org.mozilla.firefox org.videolan.VLC
+flaptak install -y xyz.armcord.ArmCord com.spotify.Client io.bassi.Amberol
 exit
