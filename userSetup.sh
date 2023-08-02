@@ -12,7 +12,7 @@ ln -sf /usr/share/zoneinfo/UTC /etc/localtime
 hwclock --systohc
 
 sudo useradd -m -G wheel zoey 
-echo 1234 | passwd zoey --stdin
+echo 1234 | passwd zoey 
 
 echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers
 # install and configure grub
@@ -59,7 +59,6 @@ flatpak install com.mattjakeman.ExtensionManager -y
 else
 echo "That Is Not A Valid DE"
 fi
-exit
 
 flatpak install app.xemu.xemu \
 com.discordapp.Discord\
@@ -114,3 +113,4 @@ org.winehq.Wine.mono\
 org.zdoom.GZDoom\
 xyz.armcord.ArmCord\
 -y 
+exit
